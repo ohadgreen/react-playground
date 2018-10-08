@@ -2,19 +2,22 @@ import React from 'react';
 import { Rider } from './Rider';
 
 class Team extends React.Component {
-    renderRider(rider) {
+    renderRider(rider, i) {
         return (
             <Rider
-                key={rider.name}
+                key={i}
                 name={rider.name}
                 nationality={rider.nationality}
+                id={rider.id}
+                onClick={this.props.onClick.bind(this)}
             />
         )
     }
 
     ridersRow() {
-        return this.props.riders.map(r => this.renderRider(r));
-    }
+        const ridersToChoose = this.props.riders.filter(rider => rider.chosen === false);
+        return ridersToChoose.map((r, i) => this.renderRider(r, i));
+    }    
 
     render() {
         return (

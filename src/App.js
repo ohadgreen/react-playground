@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TeamList from './components/pickRiders/TeamList';
+import RaceBet from './components/pickRiders/RaceBet';
 // import RadioButtons from './components/RadioButtons';
 // import SimpleSelect from './components/SimpleSelect';
 // import ReactSelectTest from './components/ReactSelectTest';
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <TeamList />      
+        <RaceBet />
       </div>
     );
   }
