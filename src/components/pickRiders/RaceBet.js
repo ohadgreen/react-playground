@@ -12,24 +12,30 @@ class RaceBet extends React.Component {
         };
     }
 
-    clickRider(clickedRider) {
-        let ridersFilter = this.state.teamRiders;
+    addOrRemoveRiderToBetList(clickedRider, addRemove) {
+        console.log(`rider ${clickedRider.name} to ${addRemove}`);
+        const toAdd = (addRemove === 'add');
+
+        let teamRidersUpdate = this.state.teamRiders;
         let chosenRidersUpdate = this.state.chosenRiders;
         if (this.state.chosenRiders.length < 3) {
-            console.log('rider clicked: ' + clickedRider.id.toString());            
-            ridersFilter.forEach(team => {
+            teamRidersUpdate.forEach(team => {
                 team.riders.forEach(rider => {
                     if (rider.id === clickedRider.id) {
-                        rider.chosen = true;
-                        console.log('chosen name: ' + rider.chosen);
+                        rider.chosen = toAdd;
                     }
                 })
             })
-            chosenRidersUpdate.push(clickedRider);
+            if (toAdd) {
+                chosenRidersUpdate.push(clickedRider);
+            }
+            else{ //remove
+                chosenRidersUpdate = chosenRidersUpdate.filter(r => r.id !== clickedRider.id);
+            }
         };
 
         this.setState({
-            teamRiders: ridersFilter,
+            teamRiders: teamRidersUpdate,
             chosenRiders: chosenRidersUpdate
         })
     }
@@ -39,10 +45,11 @@ class RaceBet extends React.Component {
             <div>
                 <PlayerChoice
                     chosenRiders={this.state.chosenRiders}
+                    onClick={this.addOrRemoveRiderToBetList.bind(this)}
                 />
                 <TeamList
                     teamRiders={this.state.teamRiders}
-                    onClick={this.clickRider.bind(this)}
+                    onClick={this.addOrRemoveRiderToBetList.bind(this)}
                 />
             </div>)
     }
