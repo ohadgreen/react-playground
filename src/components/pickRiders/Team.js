@@ -1,10 +1,12 @@
 import React from 'react';
 import { Rider } from './Rider';
+import { RiderTest } from './RiderTest';
+import './RiderTest.css';
 
 class Team extends React.Component {
     renderRider(rider, i) {
         return (
-            <Rider
+            <RiderTest
                 key={i}
                 name={rider.name}
                 nationality={rider.nationality}
@@ -24,7 +26,7 @@ class Team extends React.Component {
             <div className="team-container">
                 <div className="team-sign">
                     <b>{this.props.name}</b>
-                    <img src={this.props.img} alt={this.props.name} style={{ align: "right", width: "120px", height: "120px" }}></img>
+                    <img src={this.props.img} alt={this.props.name} style={{ align: "right", width: "90px", height: "90px" }}></img>
                 </div>
                 <div className="riders-wrapper">{this.ridersRow()}</div>
             </div>

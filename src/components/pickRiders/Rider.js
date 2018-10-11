@@ -5,6 +5,6 @@ export const Rider = (props) => {
             <div className="rider" onClick={() => props.onClick(props, 'add')}>
                 <b>{props.name}</b>
                 <p>{props.nationality}</p>
-            </div>        
+            </div>              
     )
 }

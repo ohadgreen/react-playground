@@ -20,7 +20,7 @@ body {
 }
 
 .riders-select {
-  width: 600px;
+  width: 620px;
   overflow-y: auto;
 }
 
@@ -29,7 +29,7 @@ body {
   flex-direction: row;
   border: 1px solid #999;
   border-radius: 4px;
-  padding: 15px;
+  padding: 5px;
   align-content: center;
   margin-top: 5px;
 }
@@ -38,18 +38,18 @@ body {
   display: flex;
   flex-direction: column;
 }
-
+/*
 .riders-wrapper {
   align-items: right;
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-columns: 80px 100px 100px 100px;
   grid-gap: 1rem;
   background-color: #fff;
   color: #444;
 }
 
-.rider {
-  /* width: 120px;*/
+ .rider {
+  width: 120px;
   height: 35px;  
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -59,8 +59,9 @@ body {
   border-radius: 4px;
   padding: 12px;  
   background: #f8f8f8;
-}
+} 
 
 .rider:hover{
   background: #c8c8c8;
 }
+*/

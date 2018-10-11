@@ -9,7 +9,7 @@ export const RiderTest = () => {
             <div 
                 style={{ 
                     textAlign: "center",
-                    top: "10px"
+                    top: "5px"
                     }}>
                 <b>{name}</b>
             </div>
@@ -22,7 +22,7 @@ export const RiderTest = () => {
             <Eject
                 fontSize="small"
                 style={{ position: "absolute", bottom: "10px", right: "10px" }}
-                onClick={() => console.log(name)}
+                onClick={() => console.log('eject ' + name)}
             />
             
             </div>        
