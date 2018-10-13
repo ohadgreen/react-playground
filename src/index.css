@@ -19,6 +19,16 @@ body {
   line-height: 12px;
 }
 
+.race-info {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 5px;
+  align-content: center;
+  margin-top: 5px;
+}
+
 .riders-select {
   width: 620px;
   overflow-y: auto;

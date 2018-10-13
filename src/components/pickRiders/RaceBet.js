@@ -1,5 +1,7 @@
 import React from 'react';
 import { teamRiders } from '../../resources/sampleData/teamRiders';
+import { raceInfo } from '../../resources/sampleData/raceInfo';
+import { RaceInfo } from './RaceInfo';
 import PlayerChoice from './PlayerChoice';
 import TeamList from './TeamList';
 
@@ -7,6 +9,7 @@ class RaceBet extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            raceInfo: raceInfo,
             teamRiders: teamRiders,
             chosenRiders: []
         };
@@ -43,6 +46,7 @@ class RaceBet extends React.Component {
     render() {
         return (
             <div>
+                <RaceInfo raceInfo={this.state.raceInfo}/>
                 <PlayerChoice
                     chosenRiders={this.state.chosenRiders}
                     onClick={this.addOrRemoveRiderToBetList.bind(this)}
