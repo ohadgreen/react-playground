@@ -1,0 +1,9 @@
+.race-info {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #999;
+  border-radius: 4px;
+  padding: 5px;
+  align-content: center;
+  margin-top: 5px;
+}

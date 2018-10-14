@@ -1,4 +1,4 @@
-export const raceInfo = 
+export const raceInfoSample = 
     {
         "apiRaceId": "342747",
         "raceName": "La Vuelta a Espana",
