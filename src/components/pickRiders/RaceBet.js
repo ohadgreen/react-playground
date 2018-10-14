@@ -21,7 +21,7 @@ class RaceBet extends React.Component {
 
         let teamRidersUpdate = this.state.teamRiders;
         let chosenRidersUpdate = this.state.chosenRiders;
-        if (this.state.chosenRiders.length < 3) {
+        if (this.state.chosenRiders.length <= 3) {
             teamRidersUpdate.forEach(team => {
                 team.riders.forEach(rider => {
                     if (rider.id === clickedRider.id) {
