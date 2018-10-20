@@ -18,14 +18,12 @@ export const RiderTest = (props) => {
                 fontSize="small"
                 style={{ color: "green", position: "absolute", bottom: "0px", left: "10px", iconHoverColor: '#55ff55' }}
                 onClick={() => console.log(props.name + ' info')}
-                // onClick={() => props.onClick(console.log(props.name + ' info'))}
                 />
             <Eject
                 fontSize="small"
                 style={{ position: "absolute", bottom: "0px", right: "10px" }}
-                onClick={() => props.onClick(props, 'add')}
+                onClick={() => props.onClick(props/* , 'add' */)}
             />
-            
             </div>        
     )
 }

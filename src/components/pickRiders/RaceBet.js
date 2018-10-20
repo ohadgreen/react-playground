@@ -28,6 +28,9 @@ class RaceBet extends React.Component {
         return teamRidersUpdate;
     }
 
+    addRider = (rider) => {this.addOrRemoveRiderToBetList(rider, 'add')}
+    removeRider = (rider) => {this.addOrRemoveRiderToBetList(rider, 'remove')}
+
     addOrRemoveRiderToBetList(clickedRider, addRemove) {
         let chosenRidersUpdate = this.state.chosenRiders;
         let choiceCountUpdate = this.state.choiceCount;
@@ -49,6 +52,7 @@ class RaceBet extends React.Component {
             }
             else {
                 console.log('can choose only 3');
+                teamRidersNew = this.state.teamRiders;
             }
         }
         else { // remove from chosen list
@@ -75,11 +79,13 @@ class RaceBet extends React.Component {
                 <RaceInfo raceInfo={this.state.raceInfo} />
                 <PlayerChoice
                     chosenRiders={this.state.chosenRiders}
-                    onClick={this.addOrRemoveRiderToBetList.bind(this)}
+                    // onClick={this.addOrRemoveRiderToBetList.bind(this, 'remove')}
+                    onClick={this.removeRider.bind(this)}
                 />
                 <TeamList
                     teamRiders={this.state.teamRiders}
-                    onClick={this.addOrRemoveRiderToBetList.bind(this)}
+                    // onClick={this.addOrRemoveRiderToBetList.bind(this, 'add')}
+                    onClick={this.addRider.bind(this)}
                 />
             </div>)
     }
