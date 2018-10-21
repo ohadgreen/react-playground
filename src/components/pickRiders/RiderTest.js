@@ -6,11 +6,10 @@ export const RiderTest = (props) => {
     // const name = 'Tom Dumolin'
     return (        
             <div className="box">
-                <b style={{ 
+                <b style={{
                     position: "absolute",
                     top: "3px",
-                    marginLeft:"auto",
-                    marginRight: "auto",
+                    textAlign: "left",
                     width: "120px"
                     }}>{props.name}</b> 
             

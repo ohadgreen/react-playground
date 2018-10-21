@@ -36,7 +36,7 @@ class RaceBet extends React.Component {
         let choiceCountUpdate = this.state.choiceCount;
         let teamRidersNew;
 
-        console.log(`rider ${clickedRider.name} to ${addRemove}, choice count ${choiceCountUpdate}`);
+        // console.log(`rider ${clickedRider.name} to ${addRemove}, choice count ${choiceCountUpdate}`);
         const toAdd = (addRemove === 'add');
 
         if (toAdd) {
@@ -79,12 +79,10 @@ class RaceBet extends React.Component {
                 <RaceInfo raceInfo={this.state.raceInfo} />
                 <PlayerChoice
                     chosenRiders={this.state.chosenRiders}
-                    // onClick={this.addOrRemoveRiderToBetList.bind(this, 'remove')}
                     onClick={this.removeRider.bind(this)}
                 />
                 <TeamList
                     teamRiders={this.state.teamRiders}
-                    // onClick={this.addOrRemoveRiderToBetList.bind(this, 'add')}
                     onClick={this.addRider.bind(this)}
                 />
             </div>)
