@@ -25,7 +25,7 @@ class Team extends React.Component {
         return (
             <div className="team-container">
                 <div className="team-sign">
-                    <b>{this.props.name}</b>
+                    <div className="team-name">{this.props.name}</div>
                     <img src={this.props.img} alt={this.props.name} style={{ align: "right", width: "90px", height: "90px" }}></img>
                 </div>
                 <div className="riders-wrapper">{this.ridersRow()}</div>

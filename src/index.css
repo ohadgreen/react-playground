@@ -16,7 +16,7 @@ body {
   flex-direction: row;
   border: 1px solid #999;
   border-radius: 4px;
-  padding: 5px;
+  padding: 10px;
   align-content: center;
   margin-top: 5px;
 }
@@ -24,4 +24,9 @@ body {
 .team-sign {
   display: flex;
   flex-direction: column;
+}
+
+.team-name {
+font-weight: bold;
+text-align: center;
 }

@@ -3,7 +3,6 @@ import './RiderTest.css';
 import { Eject, Info } from '@material-ui/icons'
 
 export const RiderTest = (props) => {
-    // const name = 'Tom Dumolin'
     return (        
             <div className="box">
                 <b style={{
@@ -25,4 +24,12 @@ export const RiderTest = (props) => {
             />
             </div>        
     )
+}
+
+const riderInfo = {
+    name: 'Alberto',
+    age: 33,
+    nationality: 'Spanish',
+    proWins: 15,
+    yearsPro: 5
 }
